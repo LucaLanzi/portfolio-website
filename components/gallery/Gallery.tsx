@@ -26,6 +26,13 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
               sizes="(max-width: 640px) 50vw, 33vw"
               className="object-cover transition duration-300 group-hover:scale-105"
             />
+            {image.caption ? (
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-space-black/90 to-transparent px-3 pb-2 pt-6">
+                <p className="truncate text-left font-mono text-xs text-star-white">
+                  {image.caption}
+                </p>
+              </div>
+            ) : null}
           </button>
         ))}
       </div>
