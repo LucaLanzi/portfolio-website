@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#121D33"/>
+  <circle cx="180" cy="110" r="75" fill="#FC3D21" opacity="0.28"/>
+  <circle cx="640" cy="410" r="95" fill="#0B3D91" opacity="0.3"/>
+  <g fill="#8FA0BD" font-family="monospace" font-size="18" letter-spacing="3">
+    <text x="50%" y="46%" text-anchor="middle">PROJECT IMAGE</text>
+    <text x="50%" y="54%" text-anchor="middle">PLACEHOLDER</text>
+  </g>
+</svg>

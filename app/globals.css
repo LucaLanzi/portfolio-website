@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  /* NASA-inspired palette — keep in sync with lib/theme-colors.ts */
+  --color-space-black: #0a0e17;
+  --color-space-900: #0a0e17;
+  --color-space-800: #0d1526;
+  --color-space-700: #121d33;
+  --color-space-600: #17273f;
+  --color-space-500: #1e3252;
+  --color-nasa-blue: #0b3d91;
+  --color-nasa-red: #fc3d21;
+  --color-star-white: #f5f7fa;
+  --color-star-dim: #8fa0bd;
+}
+
+@theme inline {
+  --color-space-black: var(--color-space-black);
+  --color-space-900: var(--color-space-900);
+  --color-space-800: var(--color-space-800);
+  --color-space-700: var(--color-space-700);
+  --color-space-600: var(--color-space-600);
+  --color-space-500: var(--color-space-500);
+  --color-nasa-blue: var(--color-nasa-blue);
+  --color-nasa-red: var(--color-nasa-red);
+  --color-star-white: var(--color-star-white);
+  --color-star-dim: var(--color-star-dim);
+
+  --font-display: var(--font-jetbrains-mono);
+  --font-body: var(--font-titillium);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --shadow-glow-blue: 0 0 24px 2px rgb(11 61 145 / 0.45);
+  --shadow-glow-red: 0 0 24px 2px rgb(252 61 33 / 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-space-black);
+  color: var(--color-star-white);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-nasa-red);
+  color: var(--color-star-white);
+}
