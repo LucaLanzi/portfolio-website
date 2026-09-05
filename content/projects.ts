@@ -9,7 +9,7 @@ export const projects: Project[] = [
   {
     slug: "scales",
     title: "SCALES",
-    org: "Bronco Space Lab",
+    org: "Bronco Space Lab / NASA JPL",
     summary:
       "Fault-tolerant satellite subsystem — power PCB, Linux-based ARM SOM carrier board, and F´ flight software.",
     description: [
@@ -25,6 +25,7 @@ export const projects: Project[] = [
       "/portfolio/scales/05-fprime-comm-architecture.webp",
       "/portfolio/scales/06-software-releases.png",
     ],
+    videoUrl: "https://youtu.be/couJlSxT0MU",
     tags: ["PCB Design", "Embedded Linux", "F´ Flight Software", "Yocto/BitBake"],
     repos: [
       { label: "scales-hardware", url: "https://github.com/BroncoSpace-Lab/scales-hardware" },
@@ -67,7 +68,9 @@ export const projects: Project[] = [
       "Built a standalone OBD-II scanner around a PIC18F46K22 microcontroller to read and display live vehicle diagnostic data.",
       // TODO: expand with more detail once you're ready — CAN/K-line interfacing, display, PID decoding, etc.
     ],
-    images: ["/portfolio/obdii-pic/placeholder.svg"], // TODO: swap in OBDII_PIC photos
+    images: ["/portfolio/obdii-pic/01-breadboard-lcd.jpg"],
+    videoUrl: "https://youtube.com/shorts/5vBDcXXLx8M?feature=share",
+    videoAspect: "portrait",
     tags: ["PIC Microcontroller", "Embedded C", "Automotive"],
     repos: [{ label: "OBDII_PIC", url: "https://github.com/LucaLanzi/OBDII_PIC" }],
   },

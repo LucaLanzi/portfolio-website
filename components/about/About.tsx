@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -14,6 +15,17 @@ export function About() {
       <div className="grid gap-12 md:grid-cols-2">
         <Reveal delay={0.1}>
           <div className="flex flex-col gap-4">
+            <div className="relative aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-lg border border-space-500 shadow-glow-blue">
+              <Image
+                src="/about/headshot.jpg"
+                alt={siteConfig.name}
+                fill
+                sizes="240px"
+                className="object-cover"
+                priority
+              />
+            </div>
+
             {siteConfig.bio.map((paragraph) => (
               <p key={paragraph} className="font-body text-star-dim">
                 {paragraph}

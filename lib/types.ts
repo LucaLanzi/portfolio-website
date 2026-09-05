@@ -23,6 +23,8 @@ export type Project = {
   tags: string[];
   repos: ProjectRepo[];
   liveUrl?: string;
+  videoUrl?: string;
+  videoAspect?: "landscape" | "portrait";
 };
 
 export type GalleryImage = {

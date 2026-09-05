@@ -8,6 +8,8 @@ import { FaGithub } from "react-icons/fa";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { ImageCarousel } from "@/components/portfolio/ImageCarousel";
+import { getYouTubeEmbedUrl } from "@/lib/youtube";
+import { cn } from "@/lib/cn";
 import type { Project } from "@/lib/types";
 
 type ProjectModalProps = {
@@ -16,6 +18,8 @@ type ProjectModalProps = {
 };
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const videoEmbedUrl = project.videoUrl ? getYouTubeEmbedUrl(project.videoUrl) : null;
+
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -90,6 +94,23 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </p>
               ))}
             </div>
+
+            {videoEmbedUrl ? (
+              <div
+                className={cn(
+                  "mx-auto w-full overflow-hidden rounded-md border border-space-600",
+                  project.videoAspect === "portrait" ? "max-w-xs aspect-[9/16]" : "aspect-video"
+                )}
+              >
+                <iframe
+                  src={videoEmbedUrl}
+                  title={`${project.title} video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+            ) : null}
 
             {project.repos.length > 0 ? (
               <div>
